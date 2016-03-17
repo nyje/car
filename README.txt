@@ -4,12 +4,14 @@ by azekill_DIABLO.
 
 License of source code:
 -----------------------
-WTFPL
+LGPL v2.1
 
-License of media (textures and sounds):
+License of media (texture[s] and model[s]):
 ---------------------------------------
-WTFPL
+CC v3
 
 Authors of media files:
 -----------------------
 textures: azekill_DIABLO
+models: azekill_DIABLO
+code: PilzAdam and azekill_DIABLO
