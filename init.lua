@@ -4,8 +4,10 @@
 
 local STEPH = 1 -- Stepheight, 10 = climb slabs, 0.1 = climb nodes
 local function is_ground(pos)
-	local nn = minetest.get_node(pos).name
-	return minetest.get_item_group(nn, "stone") ~= 0
+	--local nn = minetest.get_node(pos).name
+	--return minetest.get_item_group(nn, "stone") ~= 0
+	local n = minetest.get_node(pos)
+	return n.walkable
 end
 
 
