@@ -7,7 +7,7 @@ local function is_ground(pos)
 	--local nn = minetest.get_node(pos).name
 	--return minetest.get_item_group(nn, "stone") ~= 0
 	local n = minetest.get_node(pos)
-	return ~n.walkable
+	return not n.walkable 
 end
 
 
