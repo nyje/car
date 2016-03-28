@@ -4,10 +4,8 @@
 
 local STEPH = 1 -- Stepheight, 10 = climb slabs, 0.1 = climb nodes
 local function is_ground(pos)
-	--local nn = minetest.get_node(pos).name
-	--return minetest.get_item_group(nn, "stone") ~= 0
-	local n = minetest.get_node(pos)
-	return n.walkable 
+	local nn = minetest.get_node(pos).name
+	return minetest.get_item_group(nn, "stone") ~= 0
 end
 
 
@@ -214,9 +212,9 @@ minetest.register_craftitem("car:car", {
 		if pointed_thing.type ~= "node" then
 			return
 		end
-		if not is_ground(pointed_thing.under) then
-			return
-		end
+		--if not is_ground(pointed_thing.under) then
+		--	return
+		--end
 		pointed_thing.under.y = pointed_thing.under.y + 0.2
 		minetest.add_entity(pointed_thing.under, "car:car")
 		if not minetest.setting_getbool("creative_mode") then
